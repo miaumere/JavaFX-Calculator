@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="153.0" spacing="20.0" style="-fx-background-color: #343541; -fx-border-color: black; -fx-border-radius: 3px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+   <TextField fx:id="textField"  alignment="CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #ffb5f4; -fx-border-color: grey; -fx-border-radius: 3px;">
+   </TextField>
+   <GridPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="143.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="10.0" prefWidth="35.0" />
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="10.0" prefWidth="35.0" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="10.0" prefWidth="35.0" />
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints maxHeight="22.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="28.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="22.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Button fx:id="btn1" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="1" textFill="#ffb5f4" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn3" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="3" textFill="#ffb5f4" GridPane.columnIndex="2" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn2" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="2" textFill="#ffb5f4" GridPane.columnIndex="1"  onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn4" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="4" textFill="#ffb5f4" GridPane.rowIndex="1"  onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn5" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="5" textFill="#ffb5f4" GridPane.columnIndex="1" GridPane.rowIndex="1"  onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn7" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="7" textFill="#ffb5f4" GridPane.rowIndex="2"  onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn8" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="8" textFill="#ffb5f4" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn6" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="6" textFill="#ffb5f4" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn9" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="9" textFill="#ffb5f4" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btnClear" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="CE" textFill="#ffb5f4" GridPane.rowIndex="3"  onAction="#onClear">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btnEqual" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="=" textFill="#ffb5f4" GridPane.columnIndex="1" GridPane.rowIndex="3"   onAction="#onEqual">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btnPlus" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="+" textFill="#ffb5f4" GridPane.columnIndex="3" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btnMinus" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="-" textFill="#ffb5f4" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btnDivide" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="/" textFill="#ffb5f4" GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btnMultiply" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="*" textFill="#ffb5f4" GridPane.columnIndex="3" GridPane.rowIndex="3" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+         <Button id="btn0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #343541;" text="0" textFill="#ffb5f4" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#handleButtonClick">
+            <font>
+               <Font name="Lucida Console" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </GridPane>
+</VBox>
